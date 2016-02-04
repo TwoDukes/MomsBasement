@@ -212,7 +212,12 @@ public class SixenseHand : MonoBehaviour
         
 
     }
-      
+
+    void OnTriggerExit(Collider col)
+    {
+        gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+    }
+
 }
 
 
