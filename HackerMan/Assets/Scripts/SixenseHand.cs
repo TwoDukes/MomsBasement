@@ -17,6 +17,8 @@ public class SixenseHand : MonoBehaviour
     //Animator 	m_animator;
     Vector3 LVelocity, RVelocity;
 	Vector3		m_initialPosition, LprevPosition, RprevPosition;
+    Vector3 LastRotation, RotationDelta;
+    Vector3 CurrentRotation;
 	Quaternion 	m_initialRotation;
     bool LTrig = false, RTrig = false;
     GameObject lastLeft, lastRight;
@@ -29,7 +31,8 @@ public class SixenseHand : MonoBehaviour
 		//m_animator = gameObject.GetComponent<Animator>();
 		m_initialRotation = transform.localRotation;
 		m_initialPosition = transform.localPosition;
-	}
+        LastRotation = transform.rotation.eulerAngles;
+    }
 
 
     protected void Update()
@@ -42,12 +45,14 @@ public class SixenseHand : MonoBehaviour
         // calculate velocity for left then right controller
         LVelocity = CalcVelocity(0);
         RVelocity = CalcVelocity(1);
+        RotationDelta = transform.rotation.eulerAngles - LastRotation;
+        LastRotation = transform.rotation.eulerAngles;
 
         //handles input from hydra buttons and triggers
-        
 
 
-	}
+
+    }
 
     void FixedUpdate()
     {
@@ -148,20 +153,27 @@ public class SixenseHand : MonoBehaviour
             {
             gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 
+            
+
             if(LObject == null)
             {
                 LObject = col.gameObject;
+                CurrentRotation = LObject.transform.eulerAngles;
             }
+
             
 
-                if(lastLeft == LObject)
+
+            if (lastLeft == LObject)
                 {
                     Vector3 dist = gameObject.transform.position - LObject.transform.position;
 
                     LObject.GetComponent<Rigidbody>().AddForce(dist * GripStrength);
                     if (LObject.GetComponent<Rigidbody>().useGravity == true)
                     {
-                        LObject.transform.rotation = gameObject.transform.rotation;
+                    // LObject.transform.Rotate(CurrentRotation - transform.rotation.eulerAngles);
+                    // LObject.GetComponent<Rigidbody>().angularVelocity = RotationDelta;
+                    LObject.transform.rotation = gameObject.transform.rotation;
                     }
 
                     LObject.GetComponent<Rigidbody>().velocity = LVelocity / 750;
@@ -184,21 +196,22 @@ public class SixenseHand : MonoBehaviour
             {
                 RObject = col.gameObject;
             }
-                if(lastRight == RObject)
+            if (lastRight == RObject)
+            {
+                Vector3 dist = gameObject.transform.position - RObject.transform.position;
+
+                RObject.GetComponent<Rigidbody>().AddForce(dist * GripStrength);
+                if (RObject.GetComponent<Rigidbody>().useGravity == true)
                 {
-                    Vector3 dist = gameObject.transform.position - RObject.transform.position;
-
-                    RObject.GetComponent<Rigidbody>().AddForce(dist * GripStrength);
-                    if (RObject.GetComponent<Rigidbody>().useGravity == true)
-                    {
-                        RObject.transform.rotation = gameObject.transform.rotation;
-                    }
-                    RObject.GetComponent<Rigidbody>().velocity = RVelocity / 750;
+                    //RObject.GetComponent<Rigidbody>().angularVelocity = RotationDelta;
+                    RObject.transform.rotation = gameObject.transform.rotation;
                 }
-
-            
-            
+                RObject.GetComponent<Rigidbody>().velocity = RVelocity / 750;
             }
+
+
+
+        }
             else if (!RTrig && gameObject.name == "right")
             {
                 RObject = null;
@@ -215,9 +228,14 @@ public class SixenseHand : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
+        // makes hand visible if current held gets knocked out of hand
         gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-        LObject = null;
-        RObject = null;
+        
+        //makes hand know object is let go of so it doesnt snap back OnTriggerEnter
+            LObject = null;
+            RObject = null;
+        
+        
     }
 
 }
