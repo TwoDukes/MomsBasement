@@ -11,7 +11,8 @@ public class modularPositionHandler : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        choosePositions();
+        ChoosePositions();
+        SetPositions();
 	}
 	
 	// Update is called once per frame
@@ -19,16 +20,17 @@ public class modularPositionHandler : MonoBehaviour {
 	
 	}
 
-    void choosePositions()
+    void ChoosePositions()
     {
         modItems = GameObject.FindGameObjectsWithTag("modular");
         int modAmount = modItems.Length;
+        //print(modAmount);
 
         //cycles while choosings positions
         while (modAmount > 0)
         {
             //cycles through each modular item
-            for (int i = 0; i < (modItems.Length - 1); i++)
+            for (int i = 0; i < (modItems.Length); i++)
             {
 
                 //picks a position for an item unless it is already taken
@@ -36,6 +38,7 @@ public class modularPositionHandler : MonoBehaviour {
                 chosen = false;
                 while (!chosen)
                 {
+                    print("choosing for " + modItems[i].name);
                     //picks a random positions for a modular item in its own object
                     positions = modItems[i].GetComponent<modularPosition>().ChooseState();
 
@@ -85,5 +88,13 @@ public class modularPositionHandler : MonoBehaviour {
             }
         }
         print("Positions Chosen!");
+    }
+
+    void SetPositions()
+    {
+        foreach(GameObject mod in modItems)
+        {
+            mod.GetComponent<modularPosition>().PlaceItem();
+        }
     }
 }

@@ -122,9 +122,10 @@ GameObject:
   - 33: {fileID: 3307198}
   - 65: {fileID: 6549432}
   - 23: {fileID: 2381322}
+  - 114: {fileID: 11441798}
   m_Layer: 0
   m_Name: LeverPanel
-  m_TagString: Untagged
+  m_TagString: modular
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,8 +702,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143244}
-  m_LocalRotation: {x: 0, y: 0.48384917, z: 0, w: 0.87515146}
-  m_LocalPosition: {x: -0.778, y: 0.721, z: 1.109}
+  m_LocalRotation: {x: 0, y: 0.4460197, z: 0, w: 0.89502317}
+  m_LocalPosition: {x: -0.8585353, y: 0.721, z: 1.1072181}
   m_LocalScale: {x: 0.37193802, y: 0.37193805, z: 0.37193805}
   m_Children:
   - {fileID: 459210}
@@ -1294,7 +1295,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.21, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.10000001, y: 0.18965903, z: 0.13464484}
+  m_ConnectedAnchor: {x: 0.100000024, y: 0.18965814, z: 0.13464534}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1326,7 +1327,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.21, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.099997945, y: 0.18966031, z: 0.13464412}
+  m_ConnectedAnchor: {x: 0.100002006, y: 0.18966082, z: 0.13464382}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1358,7 +1359,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.21, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.10000001, y: 0.18965903, z: 0.13464484}
+  m_ConnectedAnchor: {x: 0.09999931, y: 0.1896599, z: 0.13464436}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1745,6 +1746,28 @@ MonoBehaviour:
   up: 0
   trig: 0
   leverAng: 0
+--- !u!114 &11441798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766e84b26146b4143abe918b2364b64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: 1
+  locations:
+  - {x: -0.9241003, y: 0.721, z: 2969447}
+  - {x: -0.8585353, y: 0.721, z: 1.107218}
+  - {x: 0.796, y: 0.721, z: 1.067}
+  - {x: 1.002, y: 0.721, z: 0.417}
+  rotations:
+  - {x: 0, y: 1.2574, z: 0}
+  - {x: 0, y: 52.9772, z: 0}
+  - {x: 0, y: 129.3488, z: 0}
+  - {x: 0, y: 179.1912, z: 0}
 --- !u!114 &11467946
 MonoBehaviour:
   m_ObjectHideFlags: 1
