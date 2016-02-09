@@ -4832,6 +4832,14 @@ Prefab:
       propertyPath: locations.Array.data[0].z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 11441798, guid: 6041b8b68e54bcb458c71d6ab28a8bcf, type: 2}
+      propertyPath: modular
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441798, guid: 6041b8b68e54bcb458c71d6ab28a8bcf, type: 2}
+      propertyPath: position
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6041b8b68e54bcb458c71d6ab28a8bcf, type: 2}
   m_IsPrefabParent: 0

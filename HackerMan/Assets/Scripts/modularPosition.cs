@@ -6,6 +6,7 @@ public enum ModPosition { Left, TopLeft, TopRight, Right };
 public class modularPosition : MonoBehaviour {
 
     public ModPosition position;
+    public bool modular = true;
 
     public Vector3[] locations;
     public Vector3[] rotations;
@@ -14,7 +15,10 @@ public class modularPosition : MonoBehaviour {
    //will be called to choose state
    public ModPosition ChooseState()
     {
-        position = (ModPosition)Random.Range(0, 4);
+        if (modular)
+        {
+            position = (ModPosition)Random.Range(0, 4);
+        }
        // print(position + " place");
         return (position);
     }
