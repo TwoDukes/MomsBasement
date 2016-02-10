@@ -2,6 +2,12 @@
 using System.Collections;
 using System;
 
+
+/*
+    goal state will be reached when a level is pressed in its target UP or DOWN position
+*/
+
+
 public class LeverGoal : GoalState
 {
     public GameObject lever;

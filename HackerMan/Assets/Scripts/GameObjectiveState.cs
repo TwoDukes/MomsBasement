@@ -2,6 +2,13 @@
 using System.Collections;
 using System;
 
+
+/*
+    Abstract class for goal states and fail states
+
+    All goal / fail states must override the method: CheckIfStateIsReached
+ */
+
 abstract public class GameObjectiveState : MonoBehaviour {
 
 	// Use this for initialization

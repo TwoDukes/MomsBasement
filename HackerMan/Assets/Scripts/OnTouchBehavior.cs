@@ -2,6 +2,12 @@
 using System.Collections;
 using System;
 
+
+
+/*
+    Will invoke event if the targetObject begins a collision with its target name
+*/
+
 public class OnTouchBehavior : MonoBehaviour {
 
     //public GameObject targetName;

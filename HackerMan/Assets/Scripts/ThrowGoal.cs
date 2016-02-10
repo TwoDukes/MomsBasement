@@ -2,6 +2,16 @@
 using System.Collections;
 using System;
 
+
+/*
+    Goal state is reached when player throws objectToThrow and collides with a TargetObject.
+
+    ObjectToThrow and TargetObject Must be defined in the unity editor.
+
+    If no targetObject is defined, then the goal state will be reached when the player throws the object DistanceToThrowObject away.
+*/
+
+
 public class ThrowGoal : GoalState
 {
     public GameObject objectToThrow;

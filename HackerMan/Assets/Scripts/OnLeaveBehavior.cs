@@ -2,6 +2,12 @@
 using System;
 using System.Collections;
 
+
+/*
+    Will invoke event if the targetObject ends a collision with its target name
+*/
+
+
 public class OnLeaveBehavior : MonoBehaviour {
 
     public GameObject targetName;

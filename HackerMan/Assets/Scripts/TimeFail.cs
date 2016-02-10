@@ -1,6 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
+
+/*
+    Fail State based on time.
+
+    A fail State will be reached when countdownTime <= counter
+*/
+
 public class TimeFail : FailState {
 
     public float countdownTime = 30;
@@ -27,6 +34,7 @@ public class TimeFail : FailState {
         counter += Time.deltaTime;
     }
 
+    // returns the time remainign
     public override char GetTimeCharAt(int i)
     {
         string text = "" + (countdownTime - counter);

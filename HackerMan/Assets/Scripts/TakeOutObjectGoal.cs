@@ -2,6 +2,15 @@
 using System.Collections;
 using System;
 
+
+/*
+    Goal state will be reached if an object is taken out of its container.
+
+    Both objects must be defined in the unity editor.
+
+
+*/
+
 public class TakeOutObjectGoal : GoalState
 {
 

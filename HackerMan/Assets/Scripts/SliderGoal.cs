@@ -2,6 +2,15 @@
 using System.Collections;
 using System;
 
+
+/*
+    Goal state will be reached when a slider is slid up or down (defined in the unity editor of the script)
+
+    Uptrigger: the collider object the slider will touch to be in the UP position
+    DownTrigger: the collider object the slider will touch to be in teh DOWN position
+*/
+
+
 public class SliderGoal : GoalState
 {
     public GameObject slider;

@@ -2,6 +2,13 @@
 using System.Collections;
 using System;
 
+/*
+    Goal will be reached when an object collides with its targetContainer
+
+    both objects are defined in the unity editor
+*/
+
+
 public class InsertGoal : GoalState
 {
     public GameObject objectsToInsert;

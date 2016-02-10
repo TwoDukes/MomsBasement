@@ -2,6 +2,16 @@
 using System.Collections;
 using System;
 
+
+/*
+    Goal state will be reached when an object is pointed at a target for duration of time.
+
+    Example usage: flash light at a wall
+
+    source and target objects must be defined in teh unity editor
+*/
+
+
 public class RaycastGoal : GoalState
 {
 

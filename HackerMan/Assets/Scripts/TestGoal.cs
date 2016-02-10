@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 
 
-// example goal
+// Example of a goal state based on a counter
 public class TestGoal : GoalState
 {
     public float countdown = 5f;
