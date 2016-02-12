@@ -432,7 +432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 164768, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11432214, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: challengeDescription
@@ -440,7 +440,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411452, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: countdownTime
-      value: 60
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
@@ -737,7 +737,7 @@ Transform:
   m_Children:
   - {fileID: 1243214863}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
 --- !u!23 &183885842
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -851,7 +851,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 164768, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11432214, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: challengeDescription
@@ -921,7 +921,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 167190, guid: 68cd6ba2b412f1d43aa21d4519bb078f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11482308, guid: 68cd6ba2b412f1d43aa21d4519bb078f, type: 2}
       propertyPath: objectToThrow
@@ -1231,6 +1231,10 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &358979236 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 1d4c0b99e0bad04459922484fda07684, type: 3}
+  m_PrefabInternal: {fileID: 976164038}
 --- !u!1001 &389905368
 Prefab:
   m_ObjectHideFlags: 0
@@ -1855,11 +1859,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411170, guid: cbce38358d57f144ea8c9b7f1fbae5e5, type: 2}
       propertyPath: countdown
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11482946, guid: cbce38358d57f144ea8c9b7f1fbae5e5, type: 2}
       propertyPath: countdown
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 126708, guid: cbce38358d57f144ea8c9b7f1fbae5e5, type: 2}
       propertyPath: m_IsActive
@@ -3293,6 +3297,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11486908, guid: 087b7e994cfb54b47ba95a84e2074ff7, type: 2}
+      propertyPath: position
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486908, guid: 087b7e994cfb54b47ba95a84e2074ff7, type: 2}
+      propertyPath: modular
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 087b7e994cfb54b47ba95a84e2074ff7, type: 2}
   m_IsPrefabParent: 0
@@ -3476,7 +3488,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 164768, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11432214, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: challengeDescription
@@ -3490,6 +3502,14 @@ Prefab:
       propertyPath: m_Name
       value: FlipSwitchChallenge (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11432214, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
+      propertyPath: goalState
+      value: 
+      objectReference: {fileID: 1979652205}
+    - target: {fileID: 11432214, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
+      propertyPath: failState
+      value: 
+      objectReference: {fileID: 1979652204}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
   m_IsPrefabParent: 0
@@ -4362,7 +4382,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 164768, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11432214, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: challengeDescription
@@ -7054,7 +7074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 164768, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11432214, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4, type: 2}
       propertyPath: challengeDescription
@@ -7177,6 +7197,18 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &1979652204 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11411452, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 934762074}
+  m_Script: {fileID: 11500000, guid: 3f774f22ba4f96d42b371f34e064bf7d, type: 3}
+--- !u!114 &1979652205 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11437252, guid: cd6c6fd917d6e0f4fb883df7cd67a9c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 934762074}
+  m_Script: {fileID: 11500000, guid: d3d7336441e7bc343b43008eae03ae62, type: 3}
 --- !u!1 &1990001959 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 186424, guid: 6041b8b68e54bcb458c71d6ab28a8bcf, type: 2}
@@ -7870,7 +7902,7 @@ Prefab:
     - target: {fileID: 11408356, guid: ce183da7832662646bd0ae48a76840e4, type: 2}
       propertyPath: targetObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 358979236}
     - target: {fileID: 11450240, guid: ce183da7832662646bd0ae48a76840e4, type: 2}
       propertyPath: order
       value: 7
@@ -7886,6 +7918,10 @@ Prefab:
     - target: {fileID: 11408356, guid: ce183da7832662646bd0ae48a76840e4, type: 2}
       propertyPath: durationOnTarget
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450240, guid: ce183da7832662646bd0ae48a76840e4, type: 2}
+      propertyPath: challengeDescription
+      value: shine light at Pac Man
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce183da7832662646bd0ae48a76840e4, type: 2}
