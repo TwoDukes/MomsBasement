@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerMan.CSharp.Plugins", "HackerMan.CSharp.Plugins.csproj", "{2A0B9884-87B9-4456-307D-C912AD1B42D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerMan.CSharp", "HackerMan.CSharp.csproj", "{F45A06DE-4E24-F056-185E-59B08FD233EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerMan.CSharp.Editor", "HackerMan.CSharp.Editor.csproj", "{4FC144DE-25A0-0277-3336-BC36F1CE38F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A0B9884-87B9-4456-307D-C912AD1B42D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0B9884-87B9-4456-307D-C912AD1B42D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0B9884-87B9-4456-307D-C912AD1B42D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0B9884-87B9-4456-307D-C912AD1B42D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45A06DE-4E24-F056-185E-59B08FD233EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45A06DE-4E24-F056-185E-59B08FD233EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45A06DE-4E24-F056-185E-59B08FD233EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45A06DE-4E24-F056-185E-59B08FD233EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC144DE-25A0-0277-3336-BC36F1CE38F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC144DE-25A0-0277-3336-BC36F1CE38F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC144DE-25A0-0277-3336-BC36F1CE38F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC144DE-25A0-0277-3336-BC36F1CE38F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
