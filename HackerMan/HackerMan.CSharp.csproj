@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\ButtonControl.cs" />
     <Compile Include="Assets\Scripts\Challenge.cs" />
     <Compile Include="Assets\Scripts\GameObjectiveState.cs" />
+    <Compile Include="Assets\Scripts\HandHandler.cs" />
     <Compile Include="Assets\Scripts\InsertGoal.cs" />
     <Compile Include="Assets\Scripts\LeverControl.cs" />
     <Compile Include="Assets\Scripts\LeverGoal.cs" />
