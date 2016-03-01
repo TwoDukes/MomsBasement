@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\TimeFail.cs" />
     <Compile Include="Assets\Scripts\batteryHolder.cs" />
     <Compile Include="Assets\Scripts\controlPanel.cs" />
+    <Compile Include="Assets\Scripts\handCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\modularPosition.cs" />
     <Compile Include="Assets\Scripts\modularPositionHandler.cs" />
     <Compile Include="Assets\SixenseInput\DemoScenes\Scripts\SixenseInputTest.cs" />
