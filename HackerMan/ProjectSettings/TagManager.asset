@@ -7,6 +7,14 @@ TagManager:
   - modular
   - Throwable
   - moveable
+  - Mod(big)
+  - Mod(medium)
+  - Mod(small)
+  - Mod(object)
+  - bigChallenge
+  - mediumChallenge
+  - smallChallenge
+  - itemChallenge
   layers:
   - Default
   - TransparentFX

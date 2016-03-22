@@ -43,7 +43,7 @@ public class ThrowGoal : GoalState
     public void ThrowGoal_objectHit(object sender, EventArgs e)
     {
         GameObject go = (GameObject)sender;
-        Debug.Log(sender);
+        //Debug.Log(sender);
         if (go.tag == throwableTagName || (objectToThrow != null && objectToThrow.name.Equals(go.name)))
         {
             Debug.Log("does invoke");

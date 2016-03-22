@@ -14,6 +14,7 @@ public class HandHandler : MonoBehaviour
 
     SteamVR_TrackedObject trackedObj;
     FixedJoint joint;
+    public float jointBreak;
 
     void Awake()
     {
@@ -36,13 +37,14 @@ public class HandHandler : MonoBehaviour
         //checks controllers for input
         if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger)){
             trig = true;
+            
         }
         else if(device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
         {
             trig = false;
             CurrentHeld = null;
             //turns hand model back on
-            StartCoroutine(handShow());
+            handModel.GetComponent<MeshRenderer>().enabled = true;
         }
         
 
@@ -50,10 +52,11 @@ public class HandHandler : MonoBehaviour
         if (joint == null && trig)
         {
 
-           // GameObject go = CurrentHeld;
+          
             if (CurrentHeld != null)
             {
-                handModel.SetActive(false);
+                handModel.GetComponent<MeshRenderer>().enabled = false;
+                handModel.GetComponent<Collider>().enabled = false;
                 //for objects that arent attached to the enviroment
                 if (CurrentHeld.tag == "Throwable")
                 {
@@ -63,6 +66,7 @@ public class HandHandler : MonoBehaviour
 
                     joint = CurrentHeld.AddComponent<FixedJoint>();
                     joint.connectedBody = attachPoint;
+                    joint.breakForce = jointBreak; 
                 }
 
                 //for object that are attached to the enviroment
@@ -112,7 +116,10 @@ public class HandHandler : MonoBehaviour
             rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
         }
 
-        print("TRIG " + trig + " " +gameObject.name);
+       // print("TRIG " + trig + " " +gameObject.name);
+
+
+        
     }
 
     
@@ -129,13 +136,14 @@ public class HandHandler : MonoBehaviour
         
     }
 
-   IEnumerator handShow()
-    {
-        //when object is let go of this waits .1 seconds and then turns hand back on
-        //THIS SHOULD BE BETTER
-        //POSSIBLY USED OnTriggerExit INSTEAD
-        yield return new WaitForSeconds(0.1f);
-        handModel.SetActive(true);
-        CurrentHeld = null;
+   void OnTriggerExit(Collider col) {
+
+        if (col.gameObject == CurrentHeld)
+        {
+            handModel.GetComponent<Collider>().enabled = true;
+           // handModel.GetComponent<MeshRenderer>().enabled = true;
+            CurrentHeld = null;
+        }
     }
+    
 }

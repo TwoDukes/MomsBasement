@@ -9,4 +9,6 @@ public class handCollisionHandler : MonoBehaviour
     {
         Physics.IgnoreLayerCollision(8, 9, true);
     }
+
+    
 }
