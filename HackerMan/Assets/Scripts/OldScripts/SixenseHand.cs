@@ -4,12 +4,12 @@
 // All Rights Reserved
 //
 
-using UnityEngine;
-using UnityEngine.VR;
-using System.Collections;
+//using UnityEngine;
+//using UnityEngine.VR;
+//using System.Collections;
 
-public class SixenseHand : MonoBehaviour
-{
+//public class SixenseHand : MonoBehaviour
+//{
 	//public SixenseHands	m_hand;
 	//public SixenseInput.Controller m_controller = null;
  //   public float GripStrength;
@@ -238,7 +238,7 @@ public class SixenseHand : MonoBehaviour
         
  //   }
 
-}
+//}
 
 
 

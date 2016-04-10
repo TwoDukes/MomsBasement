@@ -3,13 +3,11 @@ using System.Collections;
 
 public class modPlace : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+   public void SpawnChallenge(GameObject ItemSpawn)
+    {
+        Instantiate(ItemSpawn, gameObject.transform.position, Quaternion.identity);
+        print("PLACED " + ItemSpawn);
+        Destroy(gameObject);
+    }
 }

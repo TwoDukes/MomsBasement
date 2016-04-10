@@ -136,6 +136,7 @@
   <ItemGroup>
     <None Include="Assets\Fonts\3dtext.shader" />
     <None Include="Assets\Oculus Audio Pack 01\LICENSE.txt" />
+    <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_Blit.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_BlitFlip.shader" />
